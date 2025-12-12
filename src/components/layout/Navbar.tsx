@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Globe } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
-import { navItems } from "@/data/social-links";
+import { useLanguage } from "@/hooks/use-language";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
   const location = useLocation();
+
+  const navItems = [
+    { href: "/", label: t("nav.home") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/projects", label: t("nav.projects") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,6 +68,14 @@ export function Navbar() {
               </Link>
             ))}
             <button
+              onClick={toggleLanguage}
+              className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors flex items-center gap-1"
+              aria-label="Toggle language"
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-xs font-medium uppercase">{language}</span>
+            </button>
+            <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
               aria-label="Toggle theme"
@@ -74,7 +89,15 @@ export function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={toggleLanguage}
+              className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors flex items-center gap-1"
+              aria-label="Toggle language"
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-xs font-medium uppercase">{language}</span>
+            </button>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-secondary hover:bg-secondary/80 transition-colors"
