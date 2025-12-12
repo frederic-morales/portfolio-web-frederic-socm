@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Code2, Briefcase, GraduationCap, Heart } from "lucide-react";
+import profileImage from "@/assets/profile.png";
 
 const experiences = [
   {
@@ -36,15 +37,29 @@ const About = () => {
         {/* Hero */}
         <section className="py-16">
           <div className="container mx-auto px-6">
-            <div className="max-w-3xl">
-              <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 opacity-0 animate-fade-up">
-                Sobre <span className="text-gradient">Mí</span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-up stagger-1">
-                Soy un desarrollador apasionado por crear experiencias digitales 
-                excepcionales. Con más de 5 años de experiencia, me especializo en 
-                construir aplicaciones web modernas, escalables y centradas en el usuario.
-              </p>
+            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+              {/* Profile Image */}
+              <div className="shrink-0 opacity-0 animate-fade-up">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl" />
+                  <img
+                    src={profileImage}
+                    alt="Foto de perfil"
+                    className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-background shadow-glow"
+                  />
+                </div>
+              </div>
+
+              <div className="text-center md:text-left">
+                <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 opacity-0 animate-fade-up stagger-1">
+                  Sobre <span className="text-gradient">Mí</span>
+                </h1>
+                <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-up stagger-2 max-w-2xl">
+                  Soy un desarrollador apasionado por crear experiencias digitales 
+                  excepcionales. Con más de 5 años de experiencia, me especializo en 
+                  construir aplicaciones web modernas, escalables y centradas en el usuario.
+                </p>
+              </div>
             </div>
           </div>
         </section>
