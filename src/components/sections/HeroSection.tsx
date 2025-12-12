@@ -1,9 +1,12 @@
 import { ArrowDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/hooks/use-language";
 import profileImage from "@/assets/profile.png";
 
 export function HeroSection() {
+  const { t, language } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
@@ -19,7 +22,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse" />
               <img
                 src={profileImage}
-                alt="Foto de perfil"
+                alt={language === "es" ? "Foto de perfil" : "Profile photo"}
                 className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-glow"
               />
             </div>
@@ -27,30 +30,29 @@ export function HeroSection() {
 
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-8 opacity-0 animate-fade-up stagger-1">
             <Sparkles className="w-4 h-4" />
-            Disponible para nuevos proyectos
+            {language === "es" ? "Disponible para nuevos proyectos" : "Available for new projects"}
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6 opacity-0 animate-fade-up stagger-2">
-            Hola, soy{" "}
+            {t("hero.greeting")}{" "}
             <span className="text-gradient">
-              Desarrollador
+              {language === "es" ? "Desarrollador" : "Developer"}
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-up stagger-3">
-            Creo experiencias digitales modernas y funcionales. 
-            Especializado en desarrollo web full-stack con pasión por el diseño limpio.
+            {t("hero.description")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-up stagger-4">
             <Button asChild size="lg" className="text-base px-8 py-6 rounded-full">
               <Link to="/projects">
-                Ver Proyectos
+                {t("hero.cta.projects")}
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8 py-6 rounded-full">
               <Link to="/about">
-                Sobre mí
+                {t("nav.about")}
               </Link>
             </Button>
           </div>
@@ -62,7 +64,9 @@ export function HeroSection() {
             href="#featured"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
-            <span className="text-sm font-medium">Descubre más</span>
+            <span className="text-sm font-medium">
+              {language === "es" ? "Descubre más" : "Discover more"}
+            </span>
             <ArrowDown className="w-5 h-5 animate-bounce" />
           </a>
         </div>
