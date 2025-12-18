@@ -27,7 +27,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    setIsOpen(false);
+    setIsOpen(false); 
   }, [location]);
 
   return (

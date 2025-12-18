@@ -21,10 +21,11 @@ export const translations: Translations = {
   "hero.name": { es: "Tu Nombre", en: "Your Name" },
   "hero.role": { es: "Desarrollador Full Stack", en: "Full Stack Developer" },
   "hero.description": {
-    es: "Creo experiencias digitales excepcionales combinando diseño elegante con código limpio y eficiente.",
-    en: "I create exceptional digital experiences combining elegant design with clean and efficient code.",
+    // es: "Creo experiencias digitales combinando diseño elegante con código limpio y eficiente.",
+    es: "Con más de un año de experencia profesional en desarrollo de software.",
+    en: "With more than one year of professional experience in software development.",
   },
-  "hero.cta.projects": { es: "Ver proyectos", en: "View projects" },
+  "hero.cta.projects": { es: "Ver", en: "View projects" },
   "hero.cta.contact": { es: "Contactar", en: "Contact me" },
 
   // About Preview
