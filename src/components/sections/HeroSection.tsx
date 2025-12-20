@@ -30,7 +30,7 @@ export function HeroSection() {
 
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4 sm:mb-8 opacity-0 animate-fade-up stagger-1">
             <Rocket className="w-4 h-4" />
-            {"Frederic Ariel Soc Morales"}
+            {"Frederic Soc Morales"}
           </div>
 
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-4 sm:mb-6 opacity-0 animate-fade-up stagger-2">

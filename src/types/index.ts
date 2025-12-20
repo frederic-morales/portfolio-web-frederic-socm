@@ -6,6 +6,7 @@ export interface Project {
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
+  githubUrl2?: string;
   featured?: boolean;
 }
 

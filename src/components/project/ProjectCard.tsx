@@ -57,20 +57,20 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
         <div className="flex items-center justify-between pt-4 border-t border-border">
           <div className="flex items-center gap-3">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all"
-                aria-label="Ver demo"
-              >
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            )}
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all"
+                aria-label="Ver código"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+            )}
+             {project.githubUrl2 && (
+              <a
+                href={project.githubUrl2}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all"

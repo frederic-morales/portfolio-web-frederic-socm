@@ -15,14 +15,14 @@ export function FeaturedProjects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
-              {language === "es" ? "Proyectos Destacados" : "Featured Projects"}
+              {language === "es" ? "Proyectos" : "Projects"}
             </h2>
             <p className="text-muted-foreground max-w-lg">
               {language === "es"
                 ? "Una selección de mis trabajos más recientes y significativos."
                 : "A selection of my most recent and significant work."}
             </p>
-          </div>
+          </div> 
           <Button asChild variant="ghost" className="group">
             <Link to="/projects" className="flex items-center gap-2">
               {language === "es" ? "Ver todos" : "View all"}

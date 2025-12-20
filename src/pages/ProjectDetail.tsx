@@ -105,6 +105,19 @@ const ProjectDetail = () => {
                   </a>
                 </Button>
               )}
+              {project.githubUrl2 && (
+                <Button asChild variant="outline" size="lg" className="rounded-full">
+                  <a
+                    href={project.githubUrl2}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Github className="w-5 h-5" />
+                    Ver código fuente
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </article>

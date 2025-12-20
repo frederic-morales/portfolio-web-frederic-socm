@@ -1,14 +1,16 @@
 import { Project } from "@/types";
+import wellcoImg from "../assets/wellco_login.png"
 
 export const projects: Project[] = [
   {
-    id: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description: "Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos y panel de administración.",
-    image: "/placeholder.svg",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    id: "1",
+    title: "Prductos Farmaceuticos",
+    description: "Plataforma para registro, control y creación de nuevos productos farmaceuticos.",
+    image: wellcoImg,
+    tags: ["React", "Node.js", "SQL Server","JavaScript","Express"],
+    // liveUrl: "https://example.com",
+    githubUrl: "https://github.com/frederic-morales/nuevosProductosReact",
+    githubUrl2: "https://github.com/frederic-morales/nuevosProductoAPI",
     featured: true,
   },
   {
@@ -17,7 +19,7 @@ export const projects: Project[] = [
     description: "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones.",
     image: "/placeholder.svg",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    liveUrl: "https://example.com",
+    // liveUrl: "https://example.com",
     githubUrl: "https://github.com",
     featured: true,
   },
