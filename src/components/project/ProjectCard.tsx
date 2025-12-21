@@ -52,7 +52,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         </h3>
 
         <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
-          {project.description}
+          {project.description} 
         </p>
 
         <div className="flex items-center justify-between pt-4 border-t border-border">

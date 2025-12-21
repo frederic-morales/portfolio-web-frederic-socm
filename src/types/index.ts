@@ -1,12 +1,16 @@
 export interface Project {
   id: string;
-  title: string;
-  description: string;
+  titleEs?: string;
+  titleEn?: string;
+  descriptionEs?: string;
+  descriptionEn?: string;
   image: string;
   tags: string[];
   liveUrl?: string;
   githubUrl?: string;
   githubUrl2?: string;
+  corpLink?: string;
+  corpName?: string;
   featured?: boolean;
 }
 

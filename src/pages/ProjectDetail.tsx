@@ -4,10 +4,14 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
+import { useLanguage } from "@/hooks/use-language";
+
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
+  const { t, language } = useLanguage();
+
 
   if (!project) {
     return (
@@ -43,13 +47,13 @@ const ProjectDetail = () => {
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
-              Volver a proyectos
+              {language === "es" ? "Volver a proyectos" : "Back to projects"}
             </Link>
 
             {/* Header */}
             <div className="max-w-3xl mb-12">
               <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 opacity-0 animate-fade-up">
-                {project.title}
+                {language === "es" ? project.titleEs : project.titleEn}
               </h1>
               
               <div className="flex flex-wrap gap-2 mb-6 opacity-0 animate-fade-up stagger-1">
@@ -64,7 +68,8 @@ const ProjectDetail = () => {
               </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-up stagger-2">
-                {project.description}
+                {language === "es" ? project.descriptionEs : project.descriptionEn}
+                <a className="underline" target="_blank" href={project?.corpLink}> {project.corpName}</a>
               </p>
             </div>
 
@@ -72,14 +77,14 @@ const ProjectDetail = () => {
             <div className="aspect-video rounded-xl overflow-hidden bg-secondary mb-12 opacity-0 animate-fade-up stagger-3">
               <img
                 src={project.image}
-                alt={project.title}
+                alt={language === "es" ? project.titleEs : project.titleEn}
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Actions */}
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-up stagger-4">
-              {project.liveUrl && (
+              {/* {project.liveUrl && (
                 <Button asChild size="lg" className="rounded-full">
                   <a
                     href={project.liveUrl}
@@ -91,7 +96,7 @@ const ProjectDetail = () => {
                     Ver demo en vivo
                   </a>
                 </Button>
-              )}
+              )} */}
               {project.githubUrl && (
                 <Button asChild variant="outline" size="lg" className="rounded-full">
                   <a
@@ -101,7 +106,7 @@ const ProjectDetail = () => {
                     className="flex items-center gap-2"
                   >
                     <Github className="w-5 h-5" />
-                    Ver código fuente
+                    {language === "es" ? "Ver código fuente" : "See source code"}
                   </a>
                 </Button>
               )}
@@ -114,7 +119,7 @@ const ProjectDetail = () => {
                     className="flex items-center gap-2"
                   >
                     <Github className="w-5 h-5" />
-                    Ver código fuente
+                    {language === "es" ? "Ver código fuente" : "See source code"}
                   </a>
                 </Button>
               )}
