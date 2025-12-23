@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Code2, Briefcase, GraduationCap, Heart } from "lucide-react";
-import profileImage from "@/assets/profile.png";
+import profilePhoto from "@/assets/perfilphoto2.jpeg"
+import { useLanguage } from "@/hooks/use-language";
 
 const experiences = [
   {
@@ -30,6 +31,10 @@ const technologies = [
 ];
 
 const About = () => {
+
+  const {language} = useLanguage()
+
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -43,7 +48,7 @@ const About = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl" />
                   <img
-                    src={profileImage}
+                    src={profilePhoto}
                     alt="Foto de perfil"
                     className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-background shadow-glow"
                   />
@@ -55,9 +60,12 @@ const About = () => {
                   Sobre <span className="text-gradient">Mí</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-up stagger-2 max-w-2xl">
-                  Soy un desarrollador apasionado por crear experiencias digitales 
-                  excepcionales. Con más de 5 años de experiencia, me especializo en 
-                  construir aplicaciones web modernas, escalables y centradas en el usuario.
+                  {language === "es" ? `Soy un Desarrollador apasionado por la tecnología y la programación. 
+                  Con casi 2 años de experiencia en desarrollo de software, creando y desarrollando 
+                  Aplicaciones Web tanto Frontend como Backend, Aplicaciones de Escritorio, Testing avanzado, etc.` : 
+                  `I'm a Developer with a passion for technology and programming. With almost 2 years of 
+                  experience in software development, creating and developing Web Applications both Frontend and Backend, 
+                  Desktop Applications, Advanced Testing, etc.`}
                 </p>
               </div>
             </div>
@@ -71,9 +79,8 @@ const About = () => {
               <div className="p-2 rounded-lg bg-primary/10 text-primary">
                 <Briefcase className="w-5 h-5" />
               </div>
-              <h2 className="font-display text-2xl font-bold">Experiencia</h2>
+              <h2 className="font-display text-2xl font-bold">{language === "es" ? "Experiencia" : "Experience"}</h2>
             </div>
-
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <div
