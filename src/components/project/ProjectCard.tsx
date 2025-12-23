@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Project } from "@/types";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/hooks/use-language";
 
 interface ProjectCardProps {
   project: Project;
@@ -9,6 +10,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const { t, language } = useLanguage()
+
   return (
     <article
       className={cn(
@@ -25,7 +28,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       <div className="aspect-video overflow-hidden bg-secondary">
         <img
           src={project.image}
-          alt={project.title}
+          alt={project.titleEs}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
@@ -48,11 +51,11 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         </div>
 
         <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-          {project.title}
+          {language === "es" ? project.titleEs : project.titleEn}
         </h3>
 
         <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
-          {project.description} 
+        {language === "es" ? project.descriptionEs : project.descriptionEn}
         </p>
 
         <div className="flex items-center justify-between pt-4 border-t border-border">
@@ -85,7 +88,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             to={`/projects/${project.id}`}
             className="flex items-center gap-2 text-sm font-medium text-primary hover:gap-3 transition-all"
           >
-            Ver más
+           {language === "es" ? "Ver más" : "See more"}
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

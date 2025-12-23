@@ -84,7 +84,7 @@ const ProjectDetail = () => {
 
             {/* Actions */}
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-up stagger-4">
-              {/* {project.liveUrl && (
+              {project.liveUrl && (
                 <Button asChild size="lg" className="rounded-full">
                   <a
                     href={project.liveUrl}
@@ -93,10 +93,10 @@ const ProjectDetail = () => {
                     className="flex items-center gap-2"
                   >
                     <ExternalLink className="w-5 h-5" />
-                    Ver demo en vivo
+                    {language === "es" ? "Ver demo en vivo" : "See demo live"}
                   </a>
                 </Button>
-              )} */}
+              )}
               {project.githubUrl && (
                 <Button asChild variant="outline" size="lg" className="rounded-full">
                   <a
