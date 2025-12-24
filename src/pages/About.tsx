@@ -3,27 +3,8 @@ import { Footer } from "@/components/layout/Footer";
 import { Code2, Briefcase, GraduationCap, Heart } from "lucide-react";
 import profilePhoto from "@/assets/perfilphoto2.jpeg"
 import { useLanguage } from "@/hooks/use-language";
-
-const experiences = [
-  {
-    title: "Senior Frontend Developer",
-    company: "Tech Company",
-    period: "2022 - Presente",
-    description: "Liderando el desarrollo de aplicaciones web modernas con React y TypeScript.",
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Startup Digital",
-    period: "2020 - 2022",
-    description: "Desarrollo de soluciones end-to-end para clientes de diversos sectores.",
-  },
-  {
-    title: "Junior Developer",
-    company: "Agencia Creativa",
-    period: "2018 - 2020",
-    description: "Creación de sitios web y aplicaciones para pequeñas empresas.",
-  },
-];
+import { experiences } from "@/data/experiences";
+import { education } from "@/data/education";
 
 const technologies = [
   "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Python",
@@ -33,7 +14,6 @@ const technologies = [
 const About = () => {
 
   const {language} = useLanguage()
-
 
   return (
     <div className="min-h-screen bg-background">
@@ -57,7 +37,7 @@ const About = () => {
 
               <div className="text-center md:text-left">
                 <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 opacity-0 animate-fade-up stagger-1">
-                  Sobre <span className="text-gradient">Mí</span>
+                  {language === "es" ? "Sobre" : "About"} <span className="text-gradient">{language === "es" ? "Mí" : "Me"}</span>
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-up stagger-2 max-w-2xl">
                   {language === "es" ? `Soy un Desarrollador apasionado por la tecnología y la programación. 
@@ -83,17 +63,19 @@ const About = () => {
             </div>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
-                <div
+                <a
                   key={index}
-                  className="p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors"
+                  href={exp.linkCorp}
+                  target="_blank"
+                  className="block p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors"
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
-                    <h3 className="font-display font-semibold text-lg">{exp.title}</h3>
-                    <span className="text-sm text-primary font-medium">{exp.period}</span>
+                    <h3 className="font-display font-semibold text-lg">{language === "es" ? exp.titleEs : exp.titleEn}</h3>
+                    <span className="text-sm text-primary font-medium">{language === "es" ? exp.periodEs : exp.periodEn}</span>
                   </div>
                   <p className="text-muted-foreground font-medium mb-2">{exp.company}</p>
-                  <p className="text-muted-foreground text-sm">{exp.description}</p>
-                </div>
+                  <p className="text-muted-foreground text-sm">{language === "es" ? exp.descriptionEs : exp.descriptionEn }</p>
+                </a>
               ))}
             </div>
           </div>
@@ -106,7 +88,7 @@ const About = () => {
               <div className="p-2 rounded-lg bg-primary/10 text-primary">
                 <Code2 className="w-5 h-5" />
               </div>
-              <h2 className="font-display text-2xl font-bold">Tecnologías</h2>
+              <h2 className="font-display text-2xl font-bold">{language === "es" ? "Tecnologías" : "Technologies"}</h2>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -129,18 +111,20 @@ const About = () => {
               <div className="p-2 rounded-lg bg-primary/10 text-primary">
                 <GraduationCap className="w-5 h-5" />
               </div>
-              <h2 className="font-display text-2xl font-bold">Educación</h2>
+              <h2 className="font-display text-2xl font-bold">{language === "es" ? "Educación" : "Education"}</h2>
             </div>
 
-            <div className="p-6 bg-card rounded-xl border border-border">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
-                <h3 className="font-display font-semibold text-lg">
-                  Ingeniería en Sistemas Computacionales
-                </h3>
-                <span className="text-sm text-primary font-medium">2014 - 2018</span>
-              </div>
-              <p className="text-muted-foreground">Universidad Tecnológica</p>
-            </div>
+              {education.map((institute) => (
+                <div className="p-6 bg-card rounded-xl border border-border mb-5">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
+                  <h3 className="font-display font-semibold text-lg">
+                    {language === "es" ? institute.titleEs : institute.titleEn}
+                  </h3>
+                  <span className="text-sm text-primary font-medium">{institute.period}</span>
+                </div>
+                <p className="text-muted-foreground">{language === "es" ? institute.descriptionEs : institute.descriptionEn}</p>
+                </div>
+              ))}
           </div>
         </section>
 

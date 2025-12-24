@@ -24,3 +24,22 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export interface Experience {
+  titleEs: string,
+  titleEn: string,
+  company: string,
+  periodEs: string,
+  periodEn:  string,
+  descriptionEs: string,
+  descriptionEn:  string,  
+  linkCorp:  string
+}
+
+export interface Education {
+  titleEs?: string,
+  titleEn?: string,
+  period: string,
+  descriptionEs: string,
+  descriptionEn:  string,  
+}
