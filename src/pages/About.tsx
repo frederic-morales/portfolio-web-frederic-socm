@@ -135,14 +135,16 @@ const About = () => {
               <div className="p-2 rounded-lg bg-primary/10 text-primary">
                 <Heart className="w-5 h-5" />
               </div>
-              <h2 className="font-display text-2xl font-bold">Más allá del código</h2>
+              <h2 className="font-display text-2xl font-bold">{language === "es" ? "Más de mí" : "More about me"}</h2>
             </div>
 
             <p className="text-muted-foreground max-w-2xl leading-relaxed">
-              Cuando no estoy programando, me gusta explorar nuevas tecnologías, 
-              contribuir a proyectos open source, y compartir conocimiento con la 
-              comunidad. También disfruto de la fotografía, los viajes, y el café 
-              de especialidad.
+              {language === "es" ? `Cuando no estoy programando, me gusta explorar nuevas tecnologías,
+              y estar al tanto de todo lo nuevo en el mundo. También disfruto del futbol, 
+              los viajes, entrenar en el gimnasio y el café en especial.` 
+              : `When I'm not coding, I like to explore new technologies,
+              and keep up with everything new in the world. I also enjoy football, 
+              travel, training in the gym and especially coffee.`}
             </p>
           </div>
         </section>
