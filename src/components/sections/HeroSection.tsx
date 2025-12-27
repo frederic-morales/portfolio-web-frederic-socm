@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/hooks/use-language";
 import profileImage from "@/assets/perfilphoto2.jpeg";
+import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
   const { t, language } = useLanguage();
