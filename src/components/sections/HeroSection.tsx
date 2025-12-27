@@ -1,12 +1,13 @@
 import { ArrowDown, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useLanguage } from "@/hooks/use-language";
 import profileImage from "@/assets/perfilphoto2.jpeg";
+// 1. Cambiamos la importación
 import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
-  const { t, language } = useLanguage();
+  // 2. Usamos useTranslation en lugar de useLanguage
+  const { t } = useTranslation("translation");
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -23,7 +24,8 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse" />
               <img
                 src={profileImage}
-                alt={language === "es" ? "Foto de perfil" : "Profile photo"}
+                // 3. Usamos la nueva clave para el alt
+                alt={t("common.profilePhoto")} 
                 className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background shadow-glow"
               />
             </div>
@@ -37,7 +39,8 @@ export function HeroSection() {
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-4 sm:mb-6 opacity-0 animate-fade-up stagger-2">
             {t("hero.greeting")}{" "}
             <span className="text-gradient">
-              {language === "es" ? "Desarrollador" : "Developer"}
+              {/* 4. Usamos la nueva clave para "Developer/Desarrollador" */}
+              {t("hero.developer")}
             </span>
           </h1>
 
@@ -53,6 +56,7 @@ export function HeroSection() {
             </Button>
             <Button asChild variant="outline" size="lg" className="text-base px-8 py-6 rounded-full">
               <Link to="/about">
+                {/* 5. Usamos la clave de navegación que ya teníamos */}
                 {t("nav.about")}
               </Link>
             </Button>
@@ -66,7 +70,8 @@ export function HeroSection() {
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <span className="text-sm font-medium">
-              {language === "es" ? "Descubre más" : "Discover more"}
+              {/* 6. Usamos la nueva clave para "Descubre más" */}
+              {t("hero.discover")}
             </span>
             <ArrowDown className="w-5 h-5 animate-bounce" />
           </a>

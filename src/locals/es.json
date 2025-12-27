@@ -1,0 +1,72 @@
+{
+    "nav": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "greeting": "Hola, soy",
+      "name": "Tu Nombre",
+      "role": "Desarrollador Full Stack",
+      "description": "Con más de un año de experencia profesional en desarrollo de software.",
+      "developer": "Desarrollador",
+      "discover": "Descubre más",
+      "cta": {
+        "projects": "Ver",
+        "contact": "Contactar"
+      }
+    },
+    "about": {
+      "title": "Sobre mí",
+      "subtitle": "Conoce mi historia",
+      "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que marquen la diferencia. Con más de 5 años de experiencia, me especializo en desarrollo web full stack.",
+      "cta": "Más sobre mí"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "subtitle": "Trabajo destacado",
+      "viewAll": "Ver todos",
+      "viewProject": "Ver proyecto"
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "¿Tienes un proyecto en mente?",
+      "description": "Estoy disponible para proyectos freelance y oportunidades laborales. ¡Hablemos!",
+      "cta": "Enviar mensaje"
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados."
+    },
+    "aboutPage": {
+      "title": "Sobre mí",
+      "intro": "Soy un desarrollador full stack con pasión por crear experiencias digitales que combinen funcionalidad y estética.",
+      "experience": "Experiencia",
+      "experienceYears": "+5 años",
+      "experienceDesc": "de experiencia profesional",
+      "projectsCount": "+50 proyectos",
+      "projectsDesc": "completados exitosamente",
+      "clients": "+30 clientes",
+      "clientsDesc": "satisfechos",
+      "technologies": "Tecnologías",
+      "education": "Educación",
+      "degree": "Ingeniería en Sistemas",
+      "university": "Universidad Tecnológica"
+    },
+    "projectsPage": {
+      "title": "Proyectos",
+      "subtitle": "Una selección de mis trabajos más recientes",
+      "all": "Todos"
+    },
+    "projectDetail": {
+      "back": "Volver a proyectos",
+      "description": "Descripción",
+      "technologies": "Tecnologías utilizadas",
+      "liveDemo": "Ver demo",
+      "sourceCode": "Código fuente",
+      "notFound": "Proyecto no encontrado"
+    },
+    "common": {
+      "profilePhoto": "Foto de perfil"
+    }
+  }

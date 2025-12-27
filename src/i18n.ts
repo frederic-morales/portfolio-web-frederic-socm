@@ -8,7 +8,7 @@ export const defaultNS = 'translation';
 
 export const resources = {
   en: {
-    translation: enTranslation,
+    translation: enTranslation, // La palabra 'translation' es la que mapea el defaultNS
   },
   es: {
     translation: esTranslation,
@@ -21,7 +21,8 @@ i18n
   .init({
     resources,
     fallbackLng: 'es',
-    defaultNS,
+    ns: ['translation'], // <-- Agrega esta línea si no la tienes
+    defaultNS: "translation",
     interpolation: {
       escapeValue: false,
     },

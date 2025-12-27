@@ -1,0 +1,72 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hi, I'm",
+      "name": "Your Name",
+      "role": "Full Stack Developer",
+      "description": "With more than one year of professional experience in software development.",
+      "developer": "Developer",
+      "discover": "Discover more",
+      "cta": {
+        "projects": "View projects",
+        "contact": "Contact me"
+      }
+    },
+    "about": {
+      "title": "About me",
+      "subtitle": "Know my story",
+      "description": "I'm a developer passionate about creating technological solutions that make a difference. With over 5 years of experience, I specialize in full stack web development.",
+      "cta": "More about me"
+    },
+    "projects": {
+      "title": "Projects",
+      "subtitle": "Featured work",
+      "viewAll": "View all",
+      "viewProject": "View project"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Have a project in mind?",
+      "description": "I'm available for freelance projects and job opportunities. Let's talk!",
+      "cta": "Send message"
+    },
+    "footer": {
+      "rights": "All rights reserved."
+    },
+    "aboutPage": {
+      "title": "About me",
+      "intro": "I'm a full stack developer with a passion for creating digital experiences that combine functionality and aesthetics.",
+      "experience": "Experience",
+      "experienceYears": "+5 years",
+      "experienceDesc": "of professional experience",
+      "projectsCount": "+50 projects",
+      "projectsDesc": "successfully completed",
+      "clients": "+30 clients",
+      "clientsDesc": "satisfied",
+      "technologies": "Technologies",
+      "education": "Education",
+      "degree": "Systems Engineering",
+      "university": "Technology University"
+    },
+    "projectsPage": {
+      "title": "Projects",
+      "subtitle": "A selection of my most recent work",
+      "all": "All"
+    },
+    "projectDetail": {
+      "back": "Back to projects",
+      "description": "Description",
+      "technologies": "Technologies used",
+      "liveDemo": "Live demo",
+      "sourceCode": "Source code",
+      "notFound": "Project not found"
+    },
+    "common": {
+      "profilePhoto": "Profile photo"
+    }
+  }
