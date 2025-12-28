@@ -23,6 +23,32 @@
       "description": "I'm a developer passionate about creating technological solutions that make a difference. With over 5 years of experience, I specialize in full stack web development.",
       "cta": "More about me"
     },
+    "aboutPreview": {
+      "titleMain": "Transforming ideas into",
+      "titleHighlight": "digital experiences",
+      "description1": "With years of experience in web development, I specialize in creating modern applications that not only look good but also work exceptionally well.",
+      "description2": "My approach combines the latest technologies with solid design principles to deliver products that exceed expectations.",
+      "cta": "Learn more",
+      "skills": {
+        "development": {
+          "title": "Development",
+          "description": "React, TypeScript, Node.js, and more modern technologies."
+        },
+        "design": {
+          "title": "Design",
+          "description": "Clean, accessible, and user-centered interfaces."
+        },
+        "performance": {
+          "title": "Performance",
+          "description": "Optimization for speed and user experience."
+        }
+      }
+    },
+    "featuredProjects": {
+      "title": "Projects",
+      "description": "A selection of my most recent and significant work.",
+      "viewAll": "View all"
+    },
     "projects": {
       "title": "Projects",
       "subtitle": "Featured work",
@@ -68,5 +94,27 @@
     },
     "common": {
       "profilePhoto": "Profile photo"
-    }
+    },
+    "projectsData": {
+        "1": {
+          "title": "Pharmaceutical Products",
+          "description": "Platform for registration, control and creation of new pharmaceutical products"
+        },
+        "2": {
+          "title": "Marvel APP",
+          "description": "Single page application with Angular 17 using the Marvel API"
+        },
+        "3": {
+          "title": "REST Countries API",
+          "description": "Single Page Apliccation with the REST Countries API to show all countries in the world."
+        },
+        "4": {
+          "title": "Calculator APP",
+          "description": "Intuitive web calculator."
+        }
+      },
+      "projectCard": {
+        "seeMore": "See more",
+        "viewCode": "View code"
+      }
   }

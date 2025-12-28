@@ -1,32 +1,27 @@
 import { Code2, Palette, Zap, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/hooks/use-language";
+// 1. Usamos useTranslation
+import { useTranslation } from "react-i18next";
 
 export function AboutPreview() {
-  const { language } = useLanguage();
+  const { t } = useTranslation();
 
   const skills = [
     {
       icon: Code2,
-      title: language === "es" ? "Desarrollo" : "Development",
-      description: language === "es" 
-        ? "React, TypeScript, Node.js, y más tecnologías modernas."
-        : "React, TypeScript, Node.js, and more modern technologies.",
+      title: t("aboutPreview.skills.development.title"),
+      description: t("aboutPreview.skills.development.description"),
     },
     {
       icon: Palette,
-      title: language === "es" ? "Diseño" : "Design",
-      description: language === "es"
-        ? "Interfaces limpias, accesibles y centradas en el usuario."
-        : "Clean, accessible, and user-centered interfaces.",
+      title: t("aboutPreview.skills.design.title"),
+      description: t("aboutPreview.skills.design.description"),
     },
     {
       icon: Zap,
-      title: "Performance",
-      description: language === "es"
-        ? "Optimización para velocidad y experiencia de usuario."
-        : "Optimization for speed and user experience.",
+      title: t("aboutPreview.skills.performance.title"),
+      description: t("aboutPreview.skills.performance.description"),
     },
   ];
 
@@ -36,24 +31,20 @@ export function AboutPreview() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-              {language === "es" ? "Transformando ideas en" : "Transforming ideas into"}{" "}
+              {t("aboutPreview.titleMain")}{" "}
               <span className="text-gradient">
-                {language === "es" ? "experiencias digitales" : "digital experiences"}
+                {t("aboutPreview.titleHighlight")}
               </span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              {language === "es"
-                ? "Con años de experiencia en desarrollo web, me especializo en crear aplicaciones modernas que no solo se ven bien, sino que también funcionan de manera excepcional."
-                : "With years of experience in web development, I specialize in creating modern applications that not only look good but also work exceptionally well."}
+              {t("aboutPreview.description1")}
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              {language === "es"
-                ? "Mi enfoque combina las últimas tecnologías con principios de diseño sólidos para entregar productos que superan las expectativas."
-                : "My approach combines the latest technologies with solid design principles to deliver products that exceed expectations."}
+              {t("aboutPreview.description2")}
             </p>
             <Button asChild className="group">
               <Link to="/about" className="flex items-center gap-2">
-                {language === "es" ? "Conocer más" : "Learn more"}
+                {t("aboutPreview.cta")}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>

@@ -15,7 +15,6 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "-3s" }} />
-
       <div className="container mx-auto px-6 relative z-10 mt-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Profile Image */}
@@ -30,12 +29,10 @@ export function HeroSection() {
               />
             </div>
           </div>
-
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4 sm:mb-8 opacity-0 animate-fade-up stagger-1">
             <Rocket className="w-4 h-4" />
             {"Frederic Soc Morales"}
           </div>
-
           <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-4 sm:mb-6 opacity-0 animate-fade-up stagger-2">
             {t("hero.greeting")}{" "}
             <span className="text-gradient">
@@ -43,11 +40,9 @@ export function HeroSection() {
               {t("hero.developer")}
             </span>
           </h1>
-
           <p className="text-lg md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-24  leading-relaxed opacity-0 animate-fade-up stagger-3">
             {t("hero.description")}
           </p>
-
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-up stagger-4 pt-6 sm:pt-0">
             <Button asChild size="lg" className="text-base px-8 py-6 rounded-full">
               <Link to="/projects">
@@ -62,7 +57,6 @@ export function HeroSection() {
             </Button>
           </div>
         </div> 
-
         {/* Scroll Indicator */}
         <div className="absolute bottom-[116px] sm:bottom-[68px] left-1/2 -translate-x-1/2 opacity-0 animate-fade-in stagger-4">
           <a

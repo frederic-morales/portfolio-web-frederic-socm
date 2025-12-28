@@ -23,6 +23,32 @@
       "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que marquen la diferencia. Con más de 5 años de experiencia, me especializo en desarrollo web full stack.",
       "cta": "Más sobre mí"
     },
+    "aboutPreview": {
+      "titleMain": "Transformando ideas en",
+      "titleHighlight": "experiencias digitales",
+      "description1": "Con años de experiencia en desarrollo web, me especializo en crear aplicaciones modernas que no solo se ven bien, sino que también funcionan de manera excepcional.",
+      "description2": "Mi enfoque combina las últimas tecnologías con principios de diseño sólidos para entregar productos que superan las expectativas.",
+      "cta": "Conocer más",
+      "skills": {
+        "development": {
+          "title": "Desarrollo",
+          "description": "React, TypeScript, Node.js, y más tecnologías modernas."
+        },
+        "design": {
+          "title": "Diseño",
+          "description": "Interfaces limpias, accesibles y centradas en el usuario."
+        },
+        "performance": {
+          "title": "Performance",
+          "description": "Optimización para velocidad y experiencia de usuario."
+        }
+      }
+    },
+    "featuredProjects": {
+      "title": "Proyectos",
+      "description": "Una selección de mis trabajos más recientes y significativos.",
+      "viewAll": "Ver todos"
+    },
     "projects": {
       "title": "Proyectos",
       "subtitle": "Trabajo destacado",
@@ -68,5 +94,27 @@
     },
     "common": {
       "profilePhoto": "Foto de perfil"
-    }
+    },
+    "projectsData": {
+      "1": {
+        "title": "Productos Farmacéuticos",
+        "description": "Plataforma para registro, control y creación de nuevos productos farmacéuticos"
+      },
+      "2": {
+        "title": "Marvel APP",
+        "description": "Aplicación de una sola página con Angular 17 usando la API de Marvel."
+      },
+      "3": {
+        "title": "REST Countries API",
+        "description": "Aplicación de una sola página con la REST Countries API para mostrar todos los países del mundo."
+      },
+      "4": {
+        "title": "Calculator APP",
+        "description": "Calculadora web intuitiva."
+      }
+      },
+      "projectCard": {
+        "seeMore": "See more",
+        "viewCode": "View code"
+      }
   }

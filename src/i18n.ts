@@ -8,7 +8,7 @@ export const defaultNS = 'translation';
 
 export const resources = {
   en: {
-    translation: enTranslation, // La palabra 'translation' es la que mapea el defaultNS
+    translation: enTranslation
   },
   es: {
     translation: esTranslation,
