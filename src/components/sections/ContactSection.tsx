@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useLanguage } from "@/hooks/use-language";
+import { useTranslation } from "react-i18next";
 import { useToast } from "@/hooks/use-toast";
 
 export function ContactSection() {
-  const { language } = useLanguage();
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -21,14 +21,13 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // TODO: Connect to API
+    // Simulación de envío a API
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
     toast({
-      title: language === "es" ? "Mensaje enviado" : "Message sent",
-      description: language === "es" 
-        ? "Gracias por contactarme. Te responderé pronto."
-        : "Thanks for reaching out. I'll get back to you soon.",
+      // 3. Traducimos también los mensajes del Toast
+      title: t("contactSection.toast.successTitle"),
+      description: t("contactSection.toast.successDescription"),
     });
     
     setFormData({ name: "", email: "", message: "" });
@@ -45,13 +44,11 @@ export function ContactSection() {
             </div>
             
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              {language === "es" ? "¿Tienes un proyecto en mente?" : "Have a project in mind?"}
+              {t("contactSection.title")}
             </h2>
             
             <p className="text-muted-foreground text-lg max-w-lg mx-auto">
-              {language === "es"
-                ? "Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones."
-                : "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions."}
+              {t("contactSection.description")}
             </p>
           </div>
           
@@ -59,12 +56,12 @@ export function ContactSection() {
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="name">
-                  {language === "es" ? "Nombre" : "Name"}
+                  {t("contactSection.form.name")}
                 </Label>
                 <Input
                   id="name"
                   type="text"
-                  placeholder={language === "es" ? "Tu nombre" : "Your name"}
+                  placeholder={t("contactSection.form.namePlaceholder")}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
@@ -73,12 +70,12 @@ export function ContactSection() {
               
               <div className="space-y-2">
                 <Label htmlFor="email">
-                  {language === "es" ? "Correo electrónico" : "Email"}
+                  {t("contactSection.form.email")}
                 </Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder={language === "es" ? "tu@email.com" : "you@email.com"}
+                  placeholder={t("contactSection.form.emailPlaceholder")}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
@@ -88,11 +85,11 @@ export function ContactSection() {
             
             <div className="space-y-2">
               <Label htmlFor="message">
-                {language === "es" ? "Mensaje" : "Message"}
+                {t("contactSection.form.message")}
               </Label>
               <Textarea
                 id="message"
-                placeholder={language === "es" ? "Cuéntame sobre tu proyecto..." : "Tell me about your project..."}
+                placeholder={t("contactSection.form.messagePlaceholder")}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
@@ -108,8 +105,8 @@ export function ContactSection() {
             >
               <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               {isSubmitting 
-                ? (language === "es" ? "Enviando..." : "Sending...")
-                : (language === "es" ? "Enviar mensaje" : "Send message")}
+                ? t("contactSection.form.sending")
+                : t("contactSection.form.send")}
             </Button>
           </form>
         </div>

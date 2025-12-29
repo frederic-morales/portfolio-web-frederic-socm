@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Project } from "@/types";
 import { cn } from "@/lib/utils";
-// 1. Usamos useTranslation
 import { useTranslation } from "react-i18next";
 
 interface ProjectCardProps {

@@ -1,120 +1,164 @@
 {
-    "nav": {
-      "home": "Home",
-      "about": "About",
-      "projects": "Projects",
-      "contact": "Contact"
-    },
-    "hero": {
-      "greeting": "Hi, I'm",
-      "name": "Your Name",
-      "role": "Full Stack Developer",
-      "description": "With more than one year of professional experience in software development.",
-      "developer": "Developer",
-      "discover": "Discover more",
-      "cta": {
-        "projects": "View projects",
-        "contact": "Contact me"
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Your Name",
+    "role": "Full Stack Developer",
+    "description": "With more than one year of professional experience in software development.",
+    "developer": "Developer",
+    "discover": "Discover more",
+    "cta": {
+      "projects": "View projects",
+      "contact": "Contact me"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Know my story",
+    "description": "I'm a developer passionate about creating technological solutions that make a difference. With over 5 years of experience, I specialize in full stack web development.",
+    "cta": "More about me"
+  },
+  "aboutPreview": {
+    "titleMain": "Transforming ideas into",
+    "titleHighlight": "digital experiences",
+    "description1": "With years of experience in web development, I specialize in creating modern applications that not only look good but also work exceptionally well.",
+    "description2": "My approach combines the latest technologies with solid design principles to deliver products that exceed expectations.",
+    "cta": "Learn more",
+    "skills": {
+      "development": {
+        "title": "Development",
+        "description": "React, TypeScript, Node.js, and more modern technologies."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Clean, accessible, and user-centered interfaces."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimization for speed and user experience."
       }
+    }
+  },
+  "featuredProjects": {
+    "title": "Projects",
+    "description": "A selection of my most recent and significant work.",
+    "viewAll": "View all"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Featured work",
+    "viewAll": "View all",
+    "viewProject": "View project"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind?",
+    "description": "I'm available for freelance projects and job opportunities. Let's talk!",
+    "cta": "Send message"
+  },
+  "footer": {
+    "description": "Building digital experiences",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with"
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "subtitle": "A selection of my most recent work",
+    "all": "All"
+  },
+  "projectDetail": {
+    "back": "Back to projects",
+    "description": "Description",
+    "technologies": "Technologies used",
+    "liveDemo": "Live demo",
+    "sourceCode": "Source code",
+    "notFound": "Project not found"
+  },
+  "common": {
+    "profilePhoto": "Profile photo"
+  },
+  "projectsData": {
+    "1": {
+      "title": "Pharmaceutical Products",
+      "description": "Platform for registration, control and creation of new pharmaceutical products"
     },
-    "about": {
-      "title": "About me",
-      "subtitle": "Know my story",
-      "description": "I'm a developer passionate about creating technological solutions that make a difference. With over 5 years of experience, I specialize in full stack web development.",
-      "cta": "More about me"
+    "2": {
+      "title": "Marvel APP",
+      "description": "Single page application with Angular 17 using the Marvel API"
     },
-    "aboutPreview": {
-      "titleMain": "Transforming ideas into",
-      "titleHighlight": "digital experiences",
-      "description1": "With years of experience in web development, I specialize in creating modern applications that not only look good but also work exceptionally well.",
-      "description2": "My approach combines the latest technologies with solid design principles to deliver products that exceed expectations.",
-      "cta": "Learn more",
-      "skills": {
-        "development": {
-          "title": "Development",
-          "description": "React, TypeScript, Node.js, and more modern technologies."
-        },
-        "design": {
-          "title": "Design",
-          "description": "Clean, accessible, and user-centered interfaces."
-        },
-        "performance": {
-          "title": "Performance",
-          "description": "Optimization for speed and user experience."
-        }
-      }
+    "3": {
+      "title": "REST Countries API",
+      "description": "Single Page Apliccation with the REST Countries API to show all countries in the world."
     },
-    "featuredProjects": {
-      "title": "Projects",
-      "description": "A selection of my most recent and significant work.",
-      "viewAll": "View all"
+    "4": {
+      "title": "Calculator APP",
+      "description": "Intuitive web calculator."
+    }
+  },
+  "projectCard": {
+    "seeMore": "See more",
+    "viewCode": "View code"
+  },
+  "contactSection": {
+    "title": "Have a project in mind?",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send message",
+      "sending": "Sending..."
     },
-    "projects": {
-      "title": "Projects",
-      "subtitle": "Featured work",
-      "viewAll": "View all",
-      "viewProject": "View project"
-    },
-    "contact": {
-      "title": "Contact",
-      "subtitle": "Have a project in mind?",
-      "description": "I'm available for freelance projects and job opportunities. Let's talk!",
-      "cta": "Send message"
-    },
-    "footer": {
-      "rights": "All rights reserved."
-    },
-    "aboutPage": {
-      "title": "About me",
-      "intro": "I'm a full stack developer with a passion for creating digital experiences that combine functionality and aesthetics.",
+    "toast": {
+      "successTitle": "Message sent",
+      "successDescription": "Thanks for reaching out. I'll get back to you soon."
+    }
+  },
+  "aboutPage": {
+    "titlePrefix": "About",
+    "titleSuffix": "Me",
+    "intro": "I'm a Developer with a passion for technology and programming. With almost 2 years of experience in software development, creating and developing Web Applications both Frontend and Backend, Desktop Applications, Advanced Testing, etc.",
+    "personal": "When I'm not coding, I like to explore new technologies, and keep up with everything new in the world. I also enjoy football, travel, training in the gym and especially coffee.",
+    "sections": {
       "experience": "Experience",
-      "experienceYears": "+5 years",
-      "experienceDesc": "of professional experience",
-      "projectsCount": "+50 projects",
-      "projectsDesc": "successfully completed",
-      "clients": "+30 clients",
-      "clientsDesc": "satisfied",
       "technologies": "Technologies",
       "education": "Education",
-      "degree": "Systems Engineering",
-      "university": "Technology University"
+      "moreAboutMe": "More about me"
     },
-    "projectsPage": {
-      "title": "Projects",
-      "subtitle": "A selection of my most recent work",
-      "all": "All"
+    "profilePhotoAlt": "Profile photo"
+  },
+  "experiencesData": {
+    "banrural": {
+      "title": "QA Tester I",
+      "period": "2025 - Present",
+      "description": "Ensure software quality by identifying and preventing defects before production, collaborate with development teams to enhance product reliability and performance, document test cases and report issues using standardized QA processes."
     },
-    "projectDetail": {
-      "back": "Back to projects",
-      "description": "Description",
-      "technologies": "Technologies used",
-      "liveDemo": "Live demo",
-      "sourceCode": "Source code",
-      "notFound": "Project not found"
+    "wellco": {
+      "title": "Software Developer",
+      "period": "2024 - 2025",
+      "description": "Designed, developed, and maintained internal web and desktop applications, collaborated with cross-functional teams to optimize software performance and usability, Implemented new features using Visual Basic, .NET, HTML/CSS, JavaScript, Node.js, React, and SQL Server. Version control and collaboration managed via Git and GitHub"
+    }
+  },
+  "educationData": {
+    "engineering": {
+      "title": "Information Systems and Computer Science Engineering",
+      "description": "Software development, computer systems administration and databases, Implementation of networks and operating systems, advanced use of telecommunications"
     },
-    "common": {
-      "profilePhoto": "Profile photo"
+    "platzi": {
+      "title": "PLATZI",
+      "description": "Web Frontend Development, Databases, Backend Development, English (Online Courses)"
     },
-    "projectsData": {
-        "1": {
-          "title": "Pharmaceutical Products",
-          "description": "Platform for registration, control and creation of new pharmaceutical products"
-        },
-        "2": {
-          "title": "Marvel APP",
-          "description": "Single page application with Angular 17 using the Marvel API"
-        },
-        "3": {
-          "title": "REST Countries API",
-          "description": "Single Page Apliccation with the REST Countries API to show all countries in the world."
-        },
-        "4": {
-          "title": "Calculator APP",
-          "description": "Intuitive web calculator."
-        }
-      },
-      "projectCard": {
-        "seeMore": "See more",
-        "viewCode": "View code"
-      }
+    "calusac": {
+      "title": "CALUSAC",
+      "description": "English"
+    }
   }
+}

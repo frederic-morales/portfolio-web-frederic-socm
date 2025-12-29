@@ -1,120 +1,164 @@
 {
-    "nav": {
-      "home": "Inicio",
-      "about": "Sobre mí",
-      "projects": "Proyectos",
-      "contact": "Contacto"
-    },
-    "hero": {
-      "greeting": "Hola, soy",
-      "name": "Tu Nombre",
-      "role": "Desarrollador Full Stack",
-      "description": "Con más de un año de experencia profesional en desarrollo de software.",
-      "developer": "Desarrollador",
-      "discover": "Descubre más",
-      "cta": {
-        "projects": "Ver",
-        "contact": "Contactar"
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Tu Nombre",
+    "role": "Desarrollador Full Stack",
+    "description": "Con más de un año de experencia profesional en desarrollo de software.",
+    "developer": "Desarrollador",
+    "discover": "Descubre más",
+    "cta": {
+      "projects": "Ver",
+      "contact": "Contactar"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Conoce mi historia",
+    "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que marquen la diferencia. Con más de 5 años de experiencia, me especializo en desarrollo web full stack.",
+    "cta": "Más sobre mí"
+  },
+  "aboutPreview": {
+    "titleMain": "Transformando ideas en",
+    "titleHighlight": "experiencias digitales",
+    "description1": "Con años de experiencia en desarrollo web, me especializo en crear aplicaciones modernas que no solo se ven bien, sino que también funcionan de manera excepcional.",
+    "description2": "Mi enfoque combina las últimas tecnologías con principios de diseño sólidos para entregar productos que superan las expectativas.",
+    "cta": "Conocer más",
+    "skills": {
+      "development": {
+        "title": "Desarrollo",
+        "description": "React, TypeScript, Node.js, y más tecnologías modernas."
+      },
+      "design": {
+        "title": "Diseño",
+        "description": "Interfaces limpias, accesibles y centradas en el usuario."
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimización para velocidad y experiencia de usuario."
       }
+    }
+  },
+  "featuredProjects": {
+    "title": "Proyectos",
+    "description": "Una selección de mis trabajos más recientes y significativos.",
+    "viewAll": "Ver todos"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Trabajo destacado",
+    "viewAll": "Ver todos",
+    "viewProject": "Ver proyecto"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente?",
+    "description": "Estoy disponible para proyectos freelance y oportunidades laborales. ¡Hablemos!",
+    "cta": "Enviar mensaje"
+  },
+  "footer": {
+    "description": "Construyendo experiencias digitales",
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con"
+  },
+  "projectsPage": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de mis trabajos más recientes",
+    "all": "Todos"
+  },
+  "projectDetail": {
+    "back": "Volver a proyectos",
+    "description": "Descripción",
+    "technologies": "Tecnologías utilizadas",
+    "liveDemo": "Ver demo",
+    "sourceCode": "Código fuente",
+    "notFound": "Proyecto no encontrado"
+  },
+  "common": {
+    "profilePhoto": "Foto de perfil"
+  },
+  "projectsData": {
+    "1": {
+      "title": "Productos Farmacéuticos",
+      "description": "Plataforma para registro, control y creación de nuevos productos farmacéuticos"
     },
-    "about": {
-      "title": "Sobre mí",
-      "subtitle": "Conoce mi historia",
-      "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que marquen la diferencia. Con más de 5 años de experiencia, me especializo en desarrollo web full stack.",
-      "cta": "Más sobre mí"
+    "2": {
+      "title": "Marvel APP",
+      "description": "Aplicación de una sola página con Angular 17 usando la API de Marvel."
     },
-    "aboutPreview": {
-      "titleMain": "Transformando ideas en",
-      "titleHighlight": "experiencias digitales",
-      "description1": "Con años de experiencia en desarrollo web, me especializo en crear aplicaciones modernas que no solo se ven bien, sino que también funcionan de manera excepcional.",
-      "description2": "Mi enfoque combina las últimas tecnologías con principios de diseño sólidos para entregar productos que superan las expectativas.",
-      "cta": "Conocer más",
-      "skills": {
-        "development": {
-          "title": "Desarrollo",
-          "description": "React, TypeScript, Node.js, y más tecnologías modernas."
-        },
-        "design": {
-          "title": "Diseño",
-          "description": "Interfaces limpias, accesibles y centradas en el usuario."
-        },
-        "performance": {
-          "title": "Performance",
-          "description": "Optimización para velocidad y experiencia de usuario."
-        }
-      }
+    "3": {
+      "title": "REST Countries API",
+      "description": "Aplicación de una sola página con la REST Countries API para mostrar todos los países del mundo."
     },
-    "featuredProjects": {
-      "title": "Proyectos",
-      "description": "Una selección de mis trabajos más recientes y significativos.",
-      "viewAll": "Ver todos"
+    "4": {
+      "title": "Calculator APP",
+      "description": "Calculadora web intuitiva."
+    }
+  },
+  "projectCard": {
+    "seeMore": "Ver más",
+    "viewCode": "Ver código"
+  },
+  "contactSection": {
+    "title": "¿Tienes un proyecto en mente?",
+    "description": "Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "send": "Enviar mensaje",
+      "sending": "Enviando..."
     },
-    "projects": {
-      "title": "Proyectos",
-      "subtitle": "Trabajo destacado",
-      "viewAll": "Ver todos",
-      "viewProject": "Ver proyecto"
-    },
-    "contact": {
-      "title": "Contacto",
-      "subtitle": "¿Tienes un proyecto en mente?",
-      "description": "Estoy disponible para proyectos freelance y oportunidades laborales. ¡Hablemos!",
-      "cta": "Enviar mensaje"
-    },
-    "footer": {
-      "rights": "Todos los derechos reservados."
-    },
-    "aboutPage": {
-      "title": "Sobre mí",
-      "intro": "Soy un desarrollador full stack con pasión por crear experiencias digitales que combinen funcionalidad y estética.",
+    "toast": {
+      "successTitle": "Mensaje enviado",
+      "successDescription": "Gracias por contactarme. Te responderé pronto."
+    }
+  },
+  "aboutPage": {
+    "titlePrefix": "Sobre",
+    "titleSuffix": "Mí",
+    "intro": "Soy un Desarrollador apasionado por la tecnología y la programación. Con casi 2 años de experiencia en desarrollo de software, creando y desarrollando Aplicaciones Web tanto Frontend como Backend, Aplicaciones de Escritorio, Testing avanzado, etc.",
+    "personal": "Cuando no estoy programando, me gusta explorar nuevas tecnologías, y estar al tanto de todo lo nuevo en el mundo. También disfruto del futbol, los viajes, entrenar en el gimnasio y el café en especial.",
+    "sections": {
       "experience": "Experiencia",
-      "experienceYears": "+5 años",
-      "experienceDesc": "de experiencia profesional",
-      "projectsCount": "+50 proyectos",
-      "projectsDesc": "completados exitosamente",
-      "clients": "+30 clientes",
-      "clientsDesc": "satisfechos",
       "technologies": "Tecnologías",
       "education": "Educación",
-      "degree": "Ingeniería en Sistemas",
-      "university": "Universidad Tecnológica"
+      "moreAboutMe": "Más de mí"
     },
-    "projectsPage": {
-      "title": "Proyectos",
-      "subtitle": "Una selección de mis trabajos más recientes",
-      "all": "Todos"
+    "profilePhotoAlt": "Foto de perfil"
+  },
+  "experiencesData": {
+    "banrural": {
+      "title": "QA Tester I",
+      "period": "2025 - Presente",
+      "description": "Encargado de garantizar la calidad del software mediante la identificación y prevención de errores, colaborar con los equipos de desarrollo para mejorar la fiabilidad y el rendimiento de los productos, documentar casos de prueba e informar sobre problemas utilizando procesos estandarizados de QA."
     },
-    "projectDetail": {
-      "back": "Volver a proyectos",
-      "description": "Descripción",
-      "technologies": "Tecnologías utilizadas",
-      "liveDemo": "Ver demo",
-      "sourceCode": "Código fuente",
-      "notFound": "Proyecto no encontrado"
+    "wellco": {
+      "title": "Desarrollador de Software",
+      "period": "2024 - 2025",
+      "description": "Mantenimiento y desarrollo de aplicaciones web y de escritorio para uso internó de la empresa con tecnologías como: Visual Basic, .NET. HTMLCSS, JavaScript. NodeJS, React, ExpressJS, SQL Server, GIT."
+    }
+  },
+  "educationData": {
+    "engineering": {
+      "title": "Ingeniería en Sistemas de Información y Ciencias de la Computación",
+      "description": "Desarrollo de software, administración de sistemas informáticos y bases de datos, implementación de redes y sistemas operativos, uso avanzado de telecomunicaciones"
     },
-    "common": {
-      "profilePhoto": "Foto de perfil"
+    "platzi": {
+      "title": "PLATZI",
+      "description": "Desarrollo Web Frontend, Bases de Datos, Desarrollo Backend, Inglés (Cursos Online)"
     },
-    "projectsData": {
-      "1": {
-        "title": "Productos Farmacéuticos",
-        "description": "Plataforma para registro, control y creación de nuevos productos farmacéuticos"
-      },
-      "2": {
-        "title": "Marvel APP",
-        "description": "Aplicación de una sola página con Angular 17 usando la API de Marvel."
-      },
-      "3": {
-        "title": "REST Countries API",
-        "description": "Aplicación de una sola página con la REST Countries API para mostrar todos los países del mundo."
-      },
-      "4": {
-        "title": "Calculator APP",
-        "description": "Calculadora web intuitiva."
-      }
-      },
-      "projectCard": {
-        "seeMore": "See more",
-        "viewCode": "View code"
-      }
+    "calusac": {
+      "title": "CALUSAC",
+      "description": "Inglés"
+    }
   }
+}

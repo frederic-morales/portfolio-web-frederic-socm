@@ -1,6 +1,6 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { socialLinks } from "@/data/social-links";
-import { useLanguage } from "@/hooks/use-language";
+import { useTranslation } from "react-i18next";
 
 const iconMap: Record<string, React.ElementType> = {
   Github,
@@ -11,7 +11,7 @@ const iconMap: Record<string, React.ElementType> = {
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  const { language } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <footer className="border-t border-border bg-secondary/30">
@@ -22,7 +22,8 @@ export function Footer() {
               Portfolio<span className="text-primary">.</span>
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              {language === "es" ? "Construyendo experiencias digitales" : "Building digital experiences"}
+              {/* 3. Traducción de la descripción */}
+              {t("footer.description")}
             </p>
           </div>
 
@@ -47,8 +48,9 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} {language === "es" ? "Todos los derechos reservados." : "All rights reserved."}{" "}
-            {language === "es" ? "Hecho con" : "Made with"}{" "}
+            {/* 4. Traducción de los derechos y créditos */}
+            © {currentYear} {t("footer.rights")}{" "}
+            {t("footer.madeWith")}{" "}
             <span className="text-primary">♥</span>
           </p>
         </div>
