@@ -4,14 +4,14 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
-import { useLanguage } from "@/hooks/use-language";
-
+// 1. Usar useTranslation
+import { useTranslation } from "react-i18next";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
-  const { t, language } = useLanguage();
-
+  // 2. Extraer t
+  const { t } = useTranslation();
 
   if (!project) {
     return (
@@ -20,13 +20,13 @@ const ProjectDetail = () => {
         <main className="pt-24 pb-16">
           <div className="container mx-auto px-6 text-center py-24">
             <h1 className="font-display text-3xl font-bold mb-4">
-              Proyecto no encontrado
+              {t("projectsPage.notFound.title")}
             </h1>
             <p className="text-muted-foreground mb-8">
-              El proyecto que buscas no existe.
+              {t("projectsPage.notFound.description")}
             </p>
             <Button asChild>
-              <Link to="/projects">Ver todos los proyectos</Link>
+              <Link to="/projects">{t("projectsPage.notFound.backButton")}</Link>
             </Button>
           </div>
         </main>
@@ -41,19 +41,18 @@ const ProjectDetail = () => {
       <main className="pt-24 pb-16">
         <article className="py-16">
           <div className="container mx-auto px-6">
-            {/* Back Link */}
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4" />
-              {language === "es" ? "Volver a proyectos" : "Back to projects"}
+              {t("projectDetail.backLink")}
             </Link>
 
-            {/* Header */}
             <div className="max-w-3xl mb-12">
               <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 opacity-0 animate-fade-up">
-                {language === "es" ? project.titleEs : project.titleEn}
+                {/* Traducción dinámica por ID */}
+                {t(`projectsData.${project.id}.title`)}
               </h1>
               
               <div className="flex flex-wrap gap-2 mb-6 opacity-0 animate-fade-up stagger-1">
@@ -68,61 +67,45 @@ const ProjectDetail = () => {
               </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed opacity-0 animate-fade-up stagger-2">
-                {language === "es" ? project.descriptionEs : project.descriptionEn}
+                {t(`projectsData.${project.id}.description`)}
                 <a className="underline" target="_blank" href={project?.corpLink}> {project.corpName}</a>
               </p>
             </div>
 
-            {/* Image */}
             <div className="aspect-video rounded-xl overflow-hidden bg-secondary mb-12 opacity-0 animate-fade-up stagger-3">
               <img
                 src={project.image}
-                alt={language === "es" ? project.titleEs : project.titleEn}
+                alt={t(`projectsData.${project.id}.title`)}
                 className="w-full h-full object-cover"
               />
             </div>
 
-            {/* Actions */}
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-up stagger-4">
               {project.liveUrl && (
                 <Button asChild size="lg" className="rounded-full">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <ExternalLink className="w-5 h-5" />
-                    {language === "es" ? "Ver demo en vivo" : "See demo live"}
+                    {t("projectDetail.liveDemo")}
                   </a>
                 </Button>
               )}
               {project.githubUrl && (
                 <Button asChild variant="outline" size="lg" className="rounded-full">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <Github className="w-5 h-5" />
-                    {language === "es" ? "Ver código fuente" : "See source code"}
+                    {t("projectDetail.sourceCode")}
                   </a>
                 </Button>
               )}
-              {project.githubUrl2 && (
-                <Button asChild variant="outline" size="lg" className="rounded-full">
-                  <a
-                    href={project.githubUrl2}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <Github className="w-5 h-5" />
-                    {language === "es" ? "Ver código fuente" : "See source code"}
-                  </a>
-                </Button>
-              )}
+              {project.githubUrl2 &&(
+                   <Button asChild variant="outline" size="lg" className="rounded-full">
+                   <a href={project.githubUrl2} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                     <Github className="w-5 h-5" />
+                     {t("projectDetail.sourceCode")}
+                   </a>
+                 </Button>
+                )
+              }
             </div>
           </div>
         </article>

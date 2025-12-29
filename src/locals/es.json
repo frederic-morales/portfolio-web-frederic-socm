@@ -67,18 +67,20 @@
     "madeWith": "Hecho con"
   },
   "projectsPage": {
-    "title": "Proyectos",
-    "subtitle": "Una selección de mis trabajos más recientes",
-    "all": "Todos"
-  },
-  "projectDetail": {
-    "back": "Volver a proyectos",
-    "description": "Descripción",
-    "technologies": "Tecnologías utilizadas",
-    "liveDemo": "Ver demo",
-    "sourceCode": "Código fuente",
-    "notFound": "Proyecto no encontrado"
-  },
+      "titlePrefix": "Mis",
+      "titleSuffix": "Proyectos",
+      "description": "Una colección de proyectos en los que he trabajado, desde aplicaciones web completas hasta experimentos creativos.",
+      "notFound": {
+        "title": "Proyecto no encontrado",
+        "description": "El proyecto que buscas no existe.",
+        "backButton": "Ver todos los proyectos"
+      }
+    },
+    "projectDetail": {
+      "backLink": "Volver a proyectos",
+      "liveDemo": "Ver demo en vivo",
+      "sourceCode": "Ver código fuente"
+    },
   "common": {
     "profilePhoto": "Foto de perfil"
   },

@@ -2,11 +2,10 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ProjectCard } from "@/components/project/ProjectCard";
 import { projects } from "@/data/projects";
-import { useLanguage } from "@/hooks/use-language";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
-
-  const {language} = useLanguage()
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background">
@@ -16,12 +15,10 @@ const Projects = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mb-12">
               <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 opacity-0 animate-fade-up">
-                {language === "es" ? "Mis" : "My"} <span className="text-gradient">{language === "es" ? "Proyectos" : "Projects"}</span>
+                {t("projectsPage.titlePrefix")} <span className="text-gradient">{t("projectsPage.titleSuffix")}</span>
               </h1>
               <p className="text-xl text-muted-foreground opacity-0 animate-fade-up stagger-1">
-                {language === "es" ? "Una colección de proyectos en los que he trabajado, desde aplicaciones web completas hasta experimentos creativos." :
-                  "A collection of projects I have worked on, from complete web applications to creative experiments."
-                }
+                {t("projectsPage.description")}
               </p>
             </div>
 

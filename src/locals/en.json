@@ -67,17 +67,19 @@
     "madeWith": "Made with"
   },
   "projectsPage": {
-    "title": "Projects",
-    "subtitle": "A selection of my most recent work",
-    "all": "All"
+    "titlePrefix": "My",
+    "titleSuffix": "Projects",
+    "description": "A collection of projects I have worked on, from complete web applications to creative experiments.",
+    "notFound": {
+      "title": "Project not found",
+      "description": "The project you are looking for does not exist.",
+      "backButton": "View all projects"
+    }
   },
   "projectDetail": {
-    "back": "Back to projects",
-    "description": "Description",
-    "technologies": "Technologies used",
-    "liveDemo": "Live demo",
-    "sourceCode": "Source code",
-    "notFound": "Project not found"
+    "backLink": "Back to projects",
+    "liveDemo": "See demo live",
+    "sourceCode": "See source code"
   },
   "common": {
     "profilePhoto": "Profile photo"
