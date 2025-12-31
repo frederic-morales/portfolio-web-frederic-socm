@@ -15,7 +15,7 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background">x
         <Navbar />
         <main className="pt-24 pb-16">
           <div className="container mx-auto px-6 text-center py-24">
