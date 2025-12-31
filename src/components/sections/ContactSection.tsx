@@ -7,9 +7,12 @@ import { Label } from "@/components/ui/label";
 import { useTranslation } from "react-i18next";
 import { useToast } from "@/hooks/use-toast";
 
+import { sendContactEmail } from "@/services/contactService";
+
 export function ContactSection() {
   const { t } = useTranslation();
   const { toast } = useToast();
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -17,21 +20,28 @@ export function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulación de envío a API
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      // 3. Traducimos también los mensajes del Toast
-      title: t("contactSection.toast.successTitle"),
-      description: t("contactSection.toast.successDescription"),
-    });
-    
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+    try {
+      await sendContactEmail(formData);
+      
+      toast({
+        title: t("contactSection.toast.successTitle"),
+        description: t("contactSection.toast.successDescription"),
+      });
+      
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error instanceof Error ? error.message : "Ocurrió un error inesperado",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
