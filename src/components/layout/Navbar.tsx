@@ -57,7 +57,6 @@ export function Navbar() {
             Portfolio<span className="text-primary">.</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
@@ -97,7 +96,6 @@ export function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Menu Button - También actualizado */}
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleLanguage}
@@ -117,7 +115,26 @@ export function Navbar() {
             </button>
           </div>
         </div>
-        {/* ... resto del menú mobile ... */}
+        {isOpen && (
+          <div className="md:hidden mt-4 pb-4 animate-fade-in">
+            <div className="flex flex-col gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className={cn(
+                    "text-lg font-medium transition-colors hover:text-primary py-2",
+                    location.pathname === item.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
